@@ -1,0 +1,111 @@
+@media screen and (max-width: 1280px) {
+    .generationPage .topPart .resultSection {
+        position: relative;
+        width: 60%;
+        height: 70%;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .generationPage .topPart .resultSection {
+        position: relative;
+        width: 55%;
+        height: 60%;
+    }
+}
+@media screen and (max-width: 765px) {
+    .generationPage .topPart {
+        height: 100%;
+        width: calc(100% - 10vw);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 5rem 5vw;
+        gap: 5rem;
+    }
+    .generationPage .topPart .inputSection {
+        height: 100%;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+        text-align: left;
+    }
+    .generationPage .topPart .inputSection textarea {
+        min-height: 20%;
+        max-height: 20%;
+        min-width: 95%;
+        max-width: 95%;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        padding: 15px;
+        font-size: 1.5rem;
+        filter: drop-shadow(0 0 5px rgb(0, 0, 0));
+        font-family: 'caveat', serif;
+    }
+    .generationPage .topPart .resultSection {
+        position: relative;
+        width: 95%;
+        height: 100%;
+    }
+    .generationPage {
+        min-height: 100vh;
+        width: 100%;
+        background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0.65));
+        color: rgb(255, 255, 255);
+        animation: animation 1s ease-in;
+        position: relative;
+    }
+    .generationPage .topPart .resultSection img {
+        width: 96%;
+        height: 96%;
+        margin-top: 2%;
+        object-fit: cover;
+    }
+    .generationPage .topPart .resultSection .panel {
+        background-color: #fff;
+        border: solid 2px #000;
+        box-shadow: 0 6px 6px -6px #000;
+        object-fit: cover;
+        height: auto;
+        margin: 1vmin;
+        overflow: hidden;
+        position: relative;
+        z-index: 2;
+    }
+    .loading {
+        z-index: 2;
+        color: #000001;
+        margin: 40% 0;
+    }
+}
+@media screen and (max-width: 450px) {
+    .generationPage .topPart .inputSection {
+        height: 100%;
+        width: 95%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+        text-align: left;
+    }
+    .generationPage .topPart .inputSection textarea {
+        min-height: 20%;
+        max-height: 20%;
+        min-width: 95%;
+        max-width: 95%;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        padding: 15px;
+        font-size: 1.5rem;
+        filter: drop-shadow(0 0 5px rgb(0, 0, 0));
+        font-family: 'caveat', serif;
+        position: relative;
+        z-index: 2;
+    }
+}

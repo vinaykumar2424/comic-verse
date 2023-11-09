@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import Body from './components/Body/Body';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import GenerationPage from './components/GenerationPage/GenerationPage';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Body /> */}
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" >
+            <Route index element={<Body />} />
+            <Route path="/comics" element={<GenerationPage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
