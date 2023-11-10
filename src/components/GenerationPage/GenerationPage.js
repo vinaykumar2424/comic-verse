@@ -119,6 +119,7 @@ const GenerationPage = () => {
                 <span className='inputSection'>
                     <div className='heading2'>Write down relevant text to generate your Comic</div>
                     <div className='heading2'>⭐ Note: Please write the n queries and saprate them using '&' to genarate n-panel comic</div>
+                    <div className='heading2'>Example: comic-page1&comic-page2&...</div>
                     <textarea
                         type='text'
                         placeholder='Enter text here'
