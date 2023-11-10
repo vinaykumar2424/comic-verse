@@ -63,6 +63,7 @@
         width: 96%;
         height: 96%;
         margin-top: 2%;
+        padding-bottom: 2%;
         object-fit: cover;
     }
     .generationPage .topPart .resultSection .panel {

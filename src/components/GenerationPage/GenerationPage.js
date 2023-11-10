@@ -55,6 +55,10 @@ const GenerationPage = () => {
     const generateComic = async () => {
         setIsLoading(true);
         try {
+            if (!inputText) {
+                setIsLoading(false);
+                return;
+            }
             if (inputText) {
                 // const response = await query({ "inputs": inputText });
                 // console.log(response);
@@ -105,6 +109,7 @@ const GenerationPage = () => {
                     lightbulb
                 </span>
                 <div className='info'>
+                    <div style={{transform:"scale(1.05)"}}>Important:</div>
                     <div>Point 1: Please saparate the input values by '&'</div>
                     <div>Point 2: IN result image, There will a thought box at the bottom of the image of black color, You can drag or edit it to anywhere.</div>
                     {window.innerWidth < 765 && <div className='point3'>Point 3: Click on top right on speechBox to change the content</div>}
@@ -134,7 +139,7 @@ const GenerationPage = () => {
                                 <article className="comic">
                                     {generatedImages.map((image, index) => (
                                         <div className="panel" key={index} style={{ display: index > 9 ? 'none' : 'block' }}>
-                                            <img src={image} alt={`Panel${index + 1}`} onLoad={handleImageLoad} ref={(el) => imgRefs.current[index] = el} />
+                                            <img src={image} className='resultImage' alt={`Panel${index + 1}`} onLoad={handleImageLoad} ref={(el) => imgRefs.current[index] = el} />
                                             {index < 9 && <p className="text top-left">Page{index + 1}</p>}
                                             {index == 9 && <p className="text bottom-right">THE END</p>}
                                             <Draggable bounds={{
@@ -142,7 +147,7 @@ const GenerationPage = () => {
                                                 bottom: -5,
                                                 right: panelSize.width / 2,
                                                 top: -panelSize.height + 10
-                                            }}>
+                                            }} touch>
                                                 <div
                                                     className="box bubble bubble-bottom-left"
                                                     contentEditable="true"
